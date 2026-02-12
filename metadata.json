@@ -1,0 +1,8 @@
+{
+  "name": "Innexus Real Estate - Paraguay",
+  "description": "Tu punto de entrada para vivir, invertir o establecerte en Paraguay. Firma inmobiliaria boutique liderada por Melissa Rojas.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
