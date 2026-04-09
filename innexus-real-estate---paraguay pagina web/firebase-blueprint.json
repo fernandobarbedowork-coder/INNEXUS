@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "A potential client who filled out the contact form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the lead."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address of the lead."
+        },
+        "interest": {
+          "type": "string",
+          "enum": ["Quiero Invertir", "Quiero Mudarme", "Consultoría Empresarial"],
+          "description": "The service the lead is interested in."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the lead was created."
+        }
+      },
+      "required": ["name", "email", "interest", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of leads from the website."
+    }
+  }
+}
